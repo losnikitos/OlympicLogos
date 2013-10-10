@@ -7,7 +7,7 @@
     <script>
         docReady( function() {
             var container = document.querySelector('.js-packery');
-            var pckry = new Packery( container, {
+            window.pckry = new Packery( container, {
                 itemSelector: ".item",
                 gutter: 5,
                 columnWidth: 115
@@ -24,7 +24,12 @@
             }
         });
 
+        onload = function() {
+            pckry.layout();
+        }
+
     </script>
+
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
