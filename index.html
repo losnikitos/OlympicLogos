@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="js/packery.pkgd.min.js"></script>
+    <script src="js/draggabilly.pkgd.js"></script>
+    <script>
+        docReady( function() {
+            var container = document.querySelector('.js-packery');
+            var pckry = new Packery( container, {
+                itemSelector: ".item",
+                gutter: 5,
+                columnWidth: 115
+
+            });
+            var itemElems = pckry.getItemElements();
+            // for each item element
+            for ( var i=0, len = itemElems.length; i < len; i++ ) {
+                var elem = itemElems[i];
+                // make element draggable with Draggabilly
+                var draggie = new Draggabilly( elem );
+                // bind Draggabilly events to Packery
+                pckry.bindDraggabillyEvents( draggie );
+            }
+        });
+
+    </script>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+<div id="container" class="js-packery"
+     data-packery-options='{ "itemSelector": ".item", "gutter": 5 }'>
+
+    <div class="item"><img src="img/7E35952E.jpg"><h2 class="ru">МЮНХЕН 1972</h2><h2 class="en">MUNICH 1972</h2></div>
+    <div class="item"><img src="img/7E3595F5.jpg"><h2 class="ru">СОЧИ 2014</h2><h2 class="en">SOCHI 2014</h2></div>
+    <div class="item"><img src="img/7E3595FC.jpg"><h2 class="ru">ЛОНДОН 2012</h2><h2 class="en">LONDON 2012</h2></div>
+    <div class="item"><img src="img/7E3595FD.jpg"><h2 class="ru">ВАНКУВЕР 2010</h2><h2 class="en">VANCOUVER 2010</h2></div>
+    <div class="item"><img src="img/7E35950C.jpg"><h2 class="ru">РИО-ДЕ-ЖАНЕЙРО 2016</h2><h2 class="en">RIO DE JANERO 2016</h2></div>
+    <div class="item"><img src="img/7E35951F.jpg"><h2 class="ru">ЛОНДОН 2012</h2><h2 class="en">LONDON 2012</h2></div>
+    <div class="item"><img src="img/7E35952A.jpg"><h2 class="ru">МЮНХЕН 1972</h2><h2 class="en">MUNICH 1972</h2></div>
+    <div class="item"><img src="img/7E35952B.jpg"><h2 class="ru">СОЧИ 2014</h2><h2 class="en">SOCHI 2014</h2></div>
+    <div class="item"><img src="img/7E35952F.jpg"><h2 class="ru">ЛИЛЛЕХАММЕР 1994</h2><h2 class="en">LILLEHAMMER 1994</h2></div>
+    <div class="item"><img src="img/7E35955A.jpg"><h2 class="ru">СОЛТ-ЛЕЙК-СИТИ 2002</h2><h2 class="en">SALT LAKE CITY 2002</h2></div>
+    <div class="item"><img src="img/7E35955E.jpg"><h2 class="ru">АФИНЫ 2004</h2><h2 class="en">ATHENS 2004</h2></div>
+    <div class="item"><img src="img/7E359510.jpg"><h2 class="ru">ТУРИН 2006</h2><h2 class="en">TURIN 2006</h2></div>
+    <div class="item"><img src="img/7E359511.jpg"><h2 class="ru">ПЕКИН 2008</h2><h2 class="en">BEIJING 2008</h2></div>
+    <div class="item"><img src="img/7E359513.jpg"><h2 class="ru">ТУРИН 2006</h2><h2 class="en">TURIN 2006</h2></div>
+    <div class="item"><img src="img/7E359525.jpg"><h2 class="ru">ГРЕНОБЛЬ 1968</h2><h2 class="en">GRENOBLE 1968</h2></div>
+    <div class="item"><img src="img/7E359527.jpg"><h2 class="ru">АТЛАНТА 1996</h2><h2 class="en">ATLANTA 1996</h2></div>
+    <div class="item"><img src="img/7E359531.jpg"><h2 class="ru">ГРЕНОБЛЬ 1968</h2><h2 class="en">GRENOBLE 1968</h2></div>
+    <div class="item"><img src="img/7E359540.jpg"><h2 class="ru">САРАЕВО 1984</h2><h2 class="en">SARAJEVO 1984</h2></div>
+    <div class="item"><img src="img/7E359542.jpg"><h2 class="ru">АЛЬБЕРВИЛЬ 1992</h2><h2 class="en">ALBERTVILLE 1992</h2></div>
+    <div class="item"><img src="img/7E359543.jpg"><h2 class="ru">ПАРИЖ 1900</h2><h2 class="en">PARIS 1900</h2></div>
+    <div class="item"><img src="img/7E359546.jpg"><h2 class="ru">АФИНЫ 2004</h2><h2 class="en">ATHENS 2004</h2></div>
+    <div class="item"><img src="img/7E359556.jpg"><h2 class="ru">СОЛТ-ЛЕЙК-СИТИ 2002</h2><h2 class="en">SALT LAKE CITY 2002</h2></div>
+    <div class="item"><img src="img/D9E5C5D9.jpg"><h2 class="ru">ЛОС-АНДЖЕЛЕС 1932</h2><h2 class="en">LOS ANGELES 1932</h2></div>
+    <div class="item"><img src="img/D9E5C5F1.jpg"><h2 class="ru">САНКТ-МОРИЦ 1948</h2><h2 class="en">ST. MORITZ 1948</h2></div>
+    <div class="item"><img src="img/D9E5C5F2.jpg"><h2 class="ru">ГАРМИШ-ПАРТЕНКИРХЕН 1936</h2><h2 class="en">GARMISCH-PARTENKIRCHEN 1936</h2></div>
+    <div class="item"><img src="img/D9E5C5F3.jpg"><h2 class="ru">ЛЕЙК-ПЛЭСИД 1932</h2><h2 class="en">LAKE PLACID 1932</h2></div>
+    <div class="item"><img src="img/D9E5C5F7.jpg"><h2 class="ru">ЛОНДОН 1948</h2><h2 class="en">LONDON 1948</h2></div>
+    <div class="item"><img src="img/D9E5C5FF.jpg"><h2 class="ru">БЕРЛИН 1936</h2><h2 class="en">BERLIN 1936</h2></div>
+    <div class="item"><img src="img/D9E5C6B0.jpg"><h2 class="ru">АТЛАНТА 1996</h2><h2 class="en">ATLANTA 1996</h2></div>
+    <div class="item"><img src="img/D9E5C6B1.jpg"><h2 class="ru">СИДНЕЙ 2000</h2><h2 class="en">SYDNEY 2000</h2></div>
+    <div class="item"><img src="img/D9E5C6C3.jpg"><h2 class="ru">ЛОС-АНДЖЕЛЕС 1984</h2><h2 class="en">LOS ANGELES 1984</h2></div>
+    <div class="item"><img src="img/D9E5C6C7.jpg"><h2 class="ru">ЛОС-АНДЖЕЛЕС 1984</h2><h2 class="en">LOS ANGELES 1984</h2></div>
+    <div class="item"><img src="img/D9E5C6E7.jpg"><h2 class="ru">КАЛГАРИ 1988</h2><h2 class="en">CALGARY 1988</h2></div>
+    <div class="item"><img src="img/D9E5C6EA.jpg"><h2 class="ru">САРАЕВО 1984</h2><h2 class="en">SARAJEVO 1984</h2></div>
+    <div class="item"><img src="img/D9E5C6EB.jpg"><h2 class="ru">СЕУЛ 1988</h2><h2 class="en">SEOUL 1988</h2></div>
+    <div class="item"><img src="img/D9E5C6EE.jpg"><h2 class="ru">СЕУЛ 1988</h2><h2 class="en">SEOUL 1988</h2></div>
+    <div class="item"><img src="img/D9E5C61B.jpg"><h2 class="ru">ИНСБРУК 1964</h2><h2 class="en">INNSBRUCK 1964</h2></div>
+    <div class="item"><img src="img/D9E5C5D6.jpg"><h2 class="ru">АНТВЕРПЕН 1920</h2><h2 class="en">ANTWERP 1920</h2></div>
+    <div class="item"><img src="img/D9E5C62E.jpg"><h2 class="ru">ОСЛО 1952</h2><h2 class="en">OSLO 1952</h2></div>
+    <div class="item"><img src="img/D9E5C63F.jpg"><h2 class="ru">ЛЕЙК-ПЛЭСИД 1980</h2><h2 class="en">LAKE PLACID 1980</h2></div>
+    <div class="item"><img src="img/D9E5C66C.jpg"><h2 class="ru">МОНРЕАЛЬ 1976</h2><h2 class="en">MONTREAL 1976</h2></div>
+    <div class="item"><img src="img/D9E5C66D.jpg"><h2 class="ru">ИНСБРУК 1976</h2><h2 class="en">INNSBRUCK 1976</h2></div>
+    <div class="item"><img src="img/D9E5C68E.jpg"><h2 class="ru">СИДНЕЙ 2000</h2><h2 class="en">SYDNEY 2000</h2></div>
+    <div class="item"><img src="img/D9E5C69C.jpg"><h2 class="ru">АЛЬБЕРВИЛЬ 1992</h2><h2 class="en">ALBERTVILLE 1992</h2></div>
+    <div class="item"><img src="img/D9E5C69D.jpg"><h2 class="ru">БАРСЕЛОНА 1992</h2><h2 class="en">BARCELONA 1992</h2></div>
+    <div class="item"><img src="img/D9E5C5C9.jpg"><h2 class="ru">ЛОНДОН 1908</h2><h2 class="en">LONDON 1908</h2></div>
+    <div class="item"><img src="img/D9E5C609.jpg"><h2 class="ru">САППОРО 1972</h2><h2 class="en">SAPPORO 1972</h2></div>
+    <div class="item"><img src="img/D9E5C612.jpg"><h2 class="ru">ХЕЛЬСИНКИ 1952</h2><h2 class="en">HELSINKI 1952</h2></div>
+    <div class="item"><img src="img/D9E5C618.jpg"><h2 class="ru">ТОКИО 1964</h2><h2 class="en">TOKYO 1964</h2></div>
+    <div class="item"><img src="img/D9E5C619.jpg"><h2 class="ru">СКВО-ВЕЛЛИ 1960</h2><h2 class="en">SQUAW VALLEY 1960</h2></div>
+    <div class="item"><img src="img/D9E5C632.jpg"><h2 class="ru">МЕЛЬБУРН 1956</h2><h2 class="en">MELBOURNE 1956</h2></div>
+    <div class="item"><img src="img/D9E5C633.jpg"><h2 class="ru">РИМ 1960</h2><h2 class="en">ROME 1960</h2></div>
+    <div class="item"><img src="img/D9E5C636.jpg"><h2 class="ru">КОРТИНА Д'АМПЕЦЦО 1956</h2><h2 class="en">CORTINA D'AMPEZZO 1956</h2></div>
+    <div class="item"><img src="img/D9E5C643.jpg"><h2 class="ru">ЛЕЙК-ПЛЭСИД 1980</h2><h2 class="en">LAKE PLACID 1980</h2></div>
+    <div class="item"><img src="img/D9E5C647.jpg"><h2 class="ru">МОСКВА 1980</h2><h2 class="en">MOSCOW 1980</h2></div>
+    <div class="item"><img src="img/D9E5C662.jpg"><h2 class="ru">СТОКГОЛЬМ 1912</h2><h2 class="en">STOCKHOLM 1912</h2></div>
+    <div class="item"><img src="img/D9E5C6E6.jpg"><h2 class="ru">АФИНЫ 1896</h2><h2 class="en">ATHENS 1896</h2></div>
+    <div class="item"><img src="img/D9E5C664.jpg"><h2 class="ru">МОНРЕАЛЬ 1976</h2><h2 class="en">MONTREAL 1976</h2></div>
+    <div class="item"><img src="img/7E35955F.jpg"><h2 class="ru">САНКТ-МОРИЦ 1928</h2><h2 class="en">ST MORITZ 1928</h2></div>
+    <div class="item"><img src="img/D9E5C665.jpg"><h2 class="ru">ИНСБРУК 1976</h2><h2 class="en">INNSBRUCK 1976</h2></div>
+    <div class="item"><img src="img/D9E5C690.jpg"><h2 class="ru">НАГАНО 1998</h2><h2 class="en">NAGANO 1998</h2></div>
+    <div class="item"><img src="img/D574E9B9.jpg"><h2 class="ru">ШАМОНИ 1924</h2><h2 class="en">CHAMONIX 1924</h2></div>
+    <div class="item"><img src="img/D9E5C691.jpg"><h2 class="ru">НАГАНО 1998</h2><h2 class="en">NAGANO 1998</h2></div>
+    <div class="item"><img src="img/D9E5C694.jpg"><h2 class="ru">БАРСЕЛОНА 1992</h2><h2 class="en">BARCELONA 1992</h2></div>
+    <div class="item"><img src="img/D9E5C695.jpg"><h2 class="ru">КАЛГАРИ 1988</h2><h2 class="en">CALGARY 1988</h2></div>
+    <div class="item"><img src="img/D9E5C697.jpg"><h2 class="ru">ЛИЛЛЕХАММЕР 1994</h2><h2 class="en">LILLEHAMMER 1994</h2></div>
+    <div class="item"><img src="img/D574E9A7.jpg"><h2 class="ru">МОСКВА 1980</h2><h2 class="en">MOSCOW 1980</h2></div>
+    <div class="item"><img src="img/D574E9A8.jpg"><h2 class="ru">ПЕКИН 2008</h2><h2 class="en">BEIJING 2008</h2></div>
+    <div class="item"><img src="img/D574E9A9.jpg"><h2 class="ru">ВАНКУВЕР 2010</h2><h2 class="en">VANCOUVER 2010</h2></div>
+    <div class="item"><img src="img/7E35953B.jpg"><h2 class="ru">СЕНТ-ЛУИС 1904</h2><h2 class="en">ST LOUIS 1904</h2></div>
+    <div class="item"><img src="img/D9E5C5D8.jpg"><h2 class="ru">АМСТЕРДАМ 1928</h2><h2 class="en">AMSTERDAM 1928</h2></div>
+    <div class="item"><img src="img/7E3595F4.jpg"><h2 class="ru">ПХЕНЧХАН 2018</h2><h2 class="en">PYEONGCHANG 2018</h2></div>
+    </div>
+</body>
+</html>
